@@ -2,12 +2,12 @@
 <form [formGroup]="solicitudForm" (ngSubmit)="onSubmit()">
 
     <div class="inputGroup">
-      <input type="text" required="" autocomplete="off" formControlName="tituloMotivo">
+      <input type="text" required="" autocomplete="off" formControlName="tituloMotivo" maxlength="15">
       <label for="name">Título del motivo </label>
     </div>
 
     <div class="inputGroup">
-      <textarea type="text" required="" autocomplete="off" formControlName="motivo"></textarea>
+      <textarea type="text" required="" autocomplete="off" formControlName="motivo" maxlength="500"></textarea>
       <label for="name">Motivo</label>
     </div>
 

@@ -1,39 +1,42 @@
-<section>
-    <main class="table">
+<div class="prueba">
+    <section>
+        <main class="table">
 
-        <div class="table__header">
-            <img src="../../assets/imagenes/logonise.png" class="logo">
-            <h1>Detalles de {{usuario.nombre}}</h1>
-        </div>
+            <div class="table__header">
+                <a routerLink="/Inicio">
+                    <img src="../../assets/imagenes/logonise.png" class="logo">
+                </a>
+                <h1>Detalles de {{usuario.nombre}}</h1>
+            </div>
 
-        <div class="table__body">
+            <div class="table__body">
 
-            <div>
-                <label><strong> Nombre: </strong> {{usuario.nombre}} </label>
+                <div>
+                    <label><strong> Nombre: </strong> {{usuario.nombre}} </label>
+                </div>
+                <div>
+                    <label><strong> Teléfono: </strong> {{usuario.telefono}} </label>
+                </div>
+                <div>
+                    <label><strong> Dirección: </strong> {{usuario.direccion}} </label>
+                </div>
+                <div>
+                    <label><strong> Email: </strong> {{usuario.email}} </label>
+                </div>
+                <div>
+                    <label><strong> DNI: </strong> {{usuario.dni}} </label>
+                </div>
+                <div>
+                    <label><strong> Preferencia de la especie de mascota: </strong> {{usuario.preferenciaTipoAnimal | titlecase}} </label>
+                </div>
+                <div>
+                    <label><strong> Preferencia del tamaño de la mascota: </strong> {{usuario.preferenciaTipoTamanyo | titlecase}} </label>
+                </div>
+                <div>
+                    <label><strong> Preferencia del género de la mascota: </strong> {{usuario.preferenciaSexo | titlecase}} </label>
+                </div>
             </div>
-            <div>
-                <label><strong> Teléfono: </strong> {{usuario.telefono}} </label>
-            </div>
-            <div>
-                <label><strong> Dirección: </strong> {{usuario.direccion}} </label>
-            </div>
-            <div>
-                <label><strong> Email: </strong> {{usuario.email}} </label>
-            </div>
-            <div>
-                <label><strong> DNI: </strong> {{usuario.dni}} </label>
-            </div>
-            <div>
-                <label><strong> Preferencia de la especie de mascota: </strong> {{usuario.preferenciaTipoAnimal | titlecase}} </label>
-            </div>
-            <div>
-                <label><strong> Preferencia del tamaño de la mascota: </strong> {{usuario.preferenciaTipoTamanyo | titlecase}} </label>
-            </div>
-            <div>
-                <label><strong> Preferencia del género de la mascota: </strong> {{usuario.preferenciaSexo | titlecase}} </label>
-            </div>
-        </div>
 
-    </main>
-</section>
-
+        </main>
+    </section>
+</div>

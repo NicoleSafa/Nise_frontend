@@ -1,41 +1,16 @@
-<div class = "row">
-    <h2>Lista de Vacunas</h2>
-</div>
 <section>
     <main class="table">
 
         <div class="table__header">
-            <img src="../../assets/imagenes/logonise.png" class="logo">
+            <a routerLink="/Inicio">
+                <img src="../../assets/imagenes/logonise.png" class="logo">
+            </a>
             <h1>Vacunas</h1>
             <div class="input-group">
                 <input type="search" placeholder="Buscar vacunas...">
             </div>
         </div>
 
-<table class = "table table-striped table-bordered">
-    <thead>
-        <tr>
-            <th> Nombre </th>
-            <th> Tipo de animal </th>
-            <th> Número de dosis </th>
-            <th>Json</th>
-            <th> Ajustes </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor = "let vacuna of vacunas" >
-            <td> {{ vacuna.nombre }} </td>
-            <td> {{ vacuna.tipoAnimal }} </td>
-            <td> {{ vacuna.num_dosis }} </td>
-            <pre>{{ vacuna | json }}</pre>
-            <td>
-                <button [routerLink]="['update-vacuna', vacuna.id]" class="btn btn-primary">Editar</button>
-                <button (click) = "deleteVacuna(vacuna.id)" class = "btn btn-danger" style="margin-left: 10px"> Eliminar</button>
-                <button [routerLink]="['vacuna-details', vacuna.id]" style="margin-left: 10px" class="btn btn-primary">Detalles</button>
-            </td>
-        </tr>
-    </tbody>
-</table>
         <div class="buttonAdd">
             <i class='bx bxs-plus-circle' [routerLink]="['vacunasCrear']"></i>
             <p>Añadir</p>

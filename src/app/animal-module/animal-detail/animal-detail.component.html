@@ -1,14 +1,16 @@
 <div class="prueba">
     <section>
         <main class="table">
-    
+
             <div class="table__header">
-                <img src="../../assets/imagenes/logonise.png" class="logo">
+                <a routerLink="/Inicio">
+                    <img src="../../assets/imagenes/logonise.png" class="logo">
+                </a>
                 <h1>Detalles del animal</h1>
             </div>
-    
+
             <div class="table__body">
-    
+
                 <div>
                     <label><strong> Nombre: </strong> {{animal.nombre}} </label>
                 </div>
@@ -40,7 +42,7 @@
                     <img width="100px" [src]="animal.imagenUrl">
                 </div>
             </div>
-    
+
         </main>
     </section>
 

@@ -2,7 +2,9 @@
     <main class="table">
 
         <div class="table__header">
-            <img src="../../assets/imagenes/logonise.png" class="logo">
+            <a routerLink="/Inicio">
+                <img src="../../assets/imagenes/logonise.png" class="logo">
+            </a>
             <h1>Detalles de la vacuna</h1>
         </div>
 
@@ -17,8 +19,6 @@
             <div>
                 <label><strong> Número de dosis: </strong> {{vacuna.num_dosis}} </label>
             </div>
-
-          <pre>{{ vacuna | json }}</pre>
         </div>
 
     </main>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { SolicitudService } from '../solicitud.service';
 import { Usuario } from 'src/app/inicio/usuario';
@@ -27,7 +27,8 @@ export class SolicitudCrearComponent implements OnInit{
     private usuarioService: UsuarioService,
     private animalService: AnimalService,
     private protectoraService: ProtectoraService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private renderer: Renderer2
   ){}
 
   ngOnInit() {
@@ -76,6 +77,20 @@ export class SolicitudCrearComponent implements OnInit{
 
     this.solicitudService.save(solicitudData).subscribe(result => {
       console.log('Solicitud enviada', result);
+
+
+      // Aquí cierra el modal después de enviar la solicitud
+      const modalBackdrop = document.getElementsByClassName('modal-backdrop')[0];
+      const modalContainer = document.getElementsByClassName('modal')[0];
+
+      if (modalBackdrop) {
+          this.renderer.removeChild(document.body, modalBackdrop);
+      }
+
+      if (modalContainer) {
+          this.renderer.removeChild(document.body, modalContainer);
+      }
+
     });
   }
 

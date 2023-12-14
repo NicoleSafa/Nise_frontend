@@ -1,8 +1,11 @@
+<div class="prueba">
 <section>
     <main class="table">
 
         <div class="table__header">
-            <img src="../../assets/imagenes/logonise.png" class="logo">
+            <a routerLink="/Inicio">
+                <img src="../../assets/imagenes/logonise.png" class="logo">
+            </a>
             <h1>Usuarios asociados</h1>
             <div class="input-group">
                 <input type="search" placeholder="Buscar usuario...">
@@ -20,10 +23,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor= "let usuario of usuarios">
+                    <tr *ngFor= "let usuario of usuarioDatos">
                         <td> <strong> {{usuario.id}} </strong> </td>
                         <td> {{usuario.nombre}} </td>
-                        <td> {{usuario.loginDTO }} </td>
+                        <td> {{usuario.loginDTO.username }} </td>
                         <td class="opciones">
                             <div class="buttonDetail">
                                 <i class='bx bxs-detail' [routerLink]="['usuario-details', usuario.id]" ></i>
@@ -36,3 +39,4 @@
 
     </main>
 </section>
+</div>

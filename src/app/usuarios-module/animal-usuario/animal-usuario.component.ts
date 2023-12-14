@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { UsuarioService } from '../usuario.service';
 import { Animal } from '../animal';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-animal-usuario',
@@ -23,7 +24,8 @@ export class AnimalUsuarioComponent {
     imagenUrl: ''};
 imagenSeleccionada: File;
 
-constructor(private animalService: UsuarioService){}
+constructor(private animalService: UsuarioService,
+  private router: Router){}
 
 onImageSeleccionada(event: any): void {
 console.log('Se ha añadido o cambiado una imagen: ', event);
@@ -38,9 +40,11 @@ if (this.animal && this.imagenSeleccionada) {
 this.animalService.createAnimal(this.animal, this.imagenSeleccionada).subscribe(
 () => {
 console.log('Mascota creada correctamente');
+this.gotoInicio();
 },
 error => {
 console.log('Mascota añadida correctamente', error);
+this.gotoInicio();
 }
 );
 } else{
@@ -50,6 +54,10 @@ console.error('El objeto mascota o la imagen seleccionada no están definidas');
 
 ngOnInit(): void {
 
+}
+
+gotoInicio(){
+  this.router.navigate(['/Inicio'])
 }
 
 onSubmit(){

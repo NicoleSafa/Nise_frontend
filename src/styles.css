@@ -14,3 +14,8 @@ a:link { text-decoration: none; }
 a:visited { text-decoration: none; }
 a:hover { text-decoration: none; }
 a:active { text-decoration: none; }
+
+
+.table__header a img {
+    background-color: transparent; /* Hacer el fondo transparente */
+}

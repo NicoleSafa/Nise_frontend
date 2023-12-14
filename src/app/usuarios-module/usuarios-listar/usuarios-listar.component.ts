@@ -3,6 +3,7 @@ import { Usuario } from '../usuario';
 import { loginDTO } from '../loginDTO';
 import { UsuarioService } from '../usuario.service';
 import { Router } from '@angular/router';
+import { UsuarioDatos } from 'src/app/models/usuarioDatos';
 
 
 @Component({
@@ -13,6 +14,7 @@ import { Router } from '@angular/router';
 export class UsuariosListarComponent implements OnInit{
 
   usuarios: Usuario[];
+  usuarioDatos: UsuarioDatos[];
   // loginDTO: loginDTO[];
 
   constructor(private usuarioService: UsuarioService,
@@ -20,11 +22,18 @@ export class UsuariosListarComponent implements OnInit{
 
   ngOnInit(): void {
     this.getUsuarios();
+    this.getUsuariosDatos();
   }
 
   private getUsuarios(){
     this.usuarioService.getUsuarioList().subscribe(data => {
       this.usuarios = data;
+    });
+  }
+
+  private getUsuariosDatos(){
+    this.usuarioService.getUsuarioListDatos().subscribe(data => {
+      this.usuarioDatos = data;
     });
   }
 

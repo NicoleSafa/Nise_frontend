@@ -24,8 +24,9 @@ export class AnimalCrearComponent implements OnInit{
                     fechaEntradaProtectora: '',
                     imagenUrl: ''};
   imagenSeleccionada: File;
-  
-  constructor(private animalService: AnimalService){}
+
+  constructor(private animalService: AnimalService,
+              private router: Router){}
 
   onImageSeleccionada(event: any): void {
     console.log('Se ha añadido o cambiado una imagen: ', event);
@@ -40,9 +41,11 @@ export class AnimalCrearComponent implements OnInit{
       this.animalService.createAnimal(this.animal, this.imagenSeleccionada).subscribe(
         () => {
           console.log('Mascota creada correctamente');
+          this.gotoAnimalesList();
         },
         error => {
           console.log('Mascota añadida correctamente', error);
+          this.gotoAnimalesList();
         }
       );
     } else{
@@ -51,7 +54,11 @@ export class AnimalCrearComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    
+
+  }
+
+  gotoAnimalesList(){
+    this.router.navigate(['/animal/animalProtectoras'])
   }
 
   onSubmit(){
