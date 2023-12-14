@@ -23,8 +23,8 @@
                         <tr *ngFor= "let solicitud of solicitudes">
                             <td> <strong> {{solicitud.id}} </strong> </td>
                             <td> {{solicitud.tituloMotivo}} </td>
-                            <td> {{solicitud.animalDTO}} </td>
-                            <td> {{solicitud.usuarioDTO}} </td>
+                            <td> {{solicitud.animalDTO.nombre}} </td>
+                            <td> {{solicitud.usuarioDTO.nombre}} </td>
                             <td> {{solicitud.estadoSolicitud}} </td>
                             <td class="opciones">
                                 <div class="buttonDetail">

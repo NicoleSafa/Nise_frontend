@@ -16,8 +16,8 @@
   }
 
   main.table {
-    width: 55rem;
-    height: 35rem;
+    width: 82vw;
+    height: 90vh;
     background-color: #fff5;
 
     backdrop-filter: blur(7px);
@@ -29,7 +29,7 @@
 
   .table__header {
     width: 100%;
-    height: 28%;
+    height: 15%;
     background-color: #fff4;
     padding: .8rem 1rem;
 
@@ -75,6 +75,7 @@
     width: 95%;
     height: 70%;
     max-height: calc(89% - 1.6rem);
+    background-color: #fffb;
 
     margin: .8rem auto;
     border-radius: .6rem;
@@ -98,11 +99,74 @@
       visibility: visible;
   }
 
+  table {
+      width: 100%;
+  }
+
+  td img {
+      width: 36px;
+      height: 36px;
+      margin-right: .5rem;
+      border-radius: 50%;
+
+      vertical-align: middle;
+  }
+
+  table, th, td {
+      border-collapse: collapse;
+      padding: 1rem;
+      text-align: left;
+      text-align: center;
+  }
+
+  thead th {
+      position: sticky;
+      top: 0;
+      left: 0;
+      background-color: #e89530fe;
+      cursor: pointer;
+      text-transform: capitalize;
+      color: rgb(255, 255, 255)
+  }
+
+  tbody tr:nth-child(even) {
+      background-color: #e895302d;
+  }
+
+  tbody tr {
+      --delay: .1s;
+      transition: .5s ease-in-out var(--delay), background-color 0s;
+      text-align: center;
+  }
+
+  tbody tr.hide {
+      opacity: 0;
+      transform: translateX(100%);
+  }
+
+  tbody tr:hover {
+    font-weight: bold !important;
+  }
+
 
   @media (max-width: 1000px) {
       td:not(:first-of-type) {
           min-width: 12.1rem;
       }
+  }
+
+  thead th span.icon-arrow {
+      display: inline-block;
+      width: 1.3rem;
+      height: 1.3rem;
+      border-radius: 50%;
+      border: 1.4px solid transparent;
+
+      text-align: center;
+      font-size: 1rem;
+
+      margin-left: .5rem;
+      transition: .2s ease-in-out;
   }
 
 
@@ -116,50 +180,34 @@
     font-family: 'Margarine';
     }
 
-
-    form{
-      background-color: transparent; /* Hace que el fondo sea transparente */
+    .opciones{
+        display: flex;
+        justify-content: space-evenly;
     }
 
-    .styled-select {
-      margin-left: 1rem;
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      background-color: white; /* Color de fondo */
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M14.26 8.68l-4.61 4.62-4.6-4.62a.75.75 0 0 0-1.06 1.06l5.15 5.16a.75.75 0 0 0 1.06 0l5.15-5.16a.75.75 0 0 0 0-1.06z" fill="%23878787"/></svg>'); /* Flecha hacia abajo */
-      background-repeat: no-repeat;
-      background-position: calc(100% - 10px) center;
-  }
-  
-  .styled-select:focus {
-      outline: none;
-      box-shadow: 0 0 5px #e89530cb;
-  }
-  
-  .styled-select:hover {
-      border-color: #888;
-  }
+    .buttonEdit{
+        color: #20ac23;
+        font-size: 1.5rem;
+    }
 
-  label {
-    background-color: transparent; /* Hace que el fondo sea transparente */
-    padding: 8px; /* Ajusta el relleno según sea necesario */
-    margin-bottom: 10px; /* Espacio entre elementos */
-  }
+    .buttonDelete{
+        color: #d54141;
+        font-size: 1.5rem;
+    }
 
-  .button{
+    .buttonDetail{
+        color: #417ad5;
+        font-size: 1.5rem;
+    }
 
-    padding: 8px;
-    margin-bottom: 10px; 
-    width: 100%;
-    background-color: #e89530cb;
-    border-radius: 3rem;
-    margin-top: 1.5rem;
-}
+    .buttonAdd{
+      color: #b17714;
+      font-size: 1.5rem;
+      margin: 1rem 0 0 2.8rem;
+      display: flex;
+      align-items: center;
+    }
 
-.button:hover{
-    background-color: #b174289b;
-}
+    .buttonAdd p{
+      margin-left: 0.5rem;
+    }

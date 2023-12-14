@@ -10,7 +10,7 @@ export class Solicitud {
     tituloMotivo: string;
     motivo: string;
 
-    animalDTO: animalDTO[] = [];
-    usuarioDTO: usuarioDTO[] = [];
+    animalDTO: animalDTO;
+    usuarioDTO: usuarioDTO;
     protectoraDTO: protectoraDTO;
 }
