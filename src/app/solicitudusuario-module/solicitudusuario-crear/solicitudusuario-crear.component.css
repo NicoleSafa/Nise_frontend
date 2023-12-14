@@ -6,32 +6,72 @@
     box-sizing: border-box;
 }
 form{
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 20px;
-    align-items: center;
-
-    min-height: 100vh;
+    margin: 0 0 2rem 1.5rem;
+    min-height: 20rem;
     background-size: cover;
     background-position: center;
-    font-family: 'Lobster', sans-serif;
 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 button{
-    width: 35%;
-    height: 45px;
-    background: #fff;
+    width: 40%;
+    height: 3rem;
+    background: #bbccba;
     border: none;
     outline: none;
     outline: none;
-    border-radius: 40px;
+    border-radius: 1.2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     cursor: pointer;
     font-size: 20px;
     color: #333;
     font-weight: 600;
 }
-.prueba{
-    margin-bottom: 10px;
+
+form button{
+    align-self: flex-end;
 }
+
+.inputGroup {
+    margin: 1em 0 1em 0;
+    max-width: 250px;
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+
+  .inputGroup input, textarea {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 20px;
+    width: 150%;
+  }
+
+  .inputGroup label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    padding-bottom: 0.8em;
+    /* padding: 0.8em; */
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: rgb(100, 100, 100);
+  }
+
+  .inputGroup :is(input:focus, textarea:focus, input:valid, textarea:valid)~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    margin-left: 1.3em;
+    padding: 0.4em;
+    background-color: #ffffff;
+  }
+
+  .inputGroup :is(input:focus, textarea:focus, input:valid, textarea:valid) {
+    border-color: #5d8c5c;
+  }
