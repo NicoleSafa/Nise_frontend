@@ -45,7 +45,7 @@ export class SolicitudusuarioService {
 
    getSolicitudUsuarioById(id: number): Observable<Solicitudusuario>{
     return this.http.get<Solicitudusuario>(`http://localhost:8080/solicitudUsuario/`+ `${id}`);
-   }
+   }//
 
    //listar
    getsolicitudUsuarioList(): Observable<Solicitudusuario[]>{
