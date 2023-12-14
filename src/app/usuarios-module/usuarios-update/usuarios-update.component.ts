@@ -33,7 +33,7 @@ export class UsuariosUpdateComponent implements OnInit{
   }
 
   gotoUsuarioList(){
-    this.router.navigate(['/']);
+    this.router.navigate(['/usuarios/perfil']);
   }
 
 
