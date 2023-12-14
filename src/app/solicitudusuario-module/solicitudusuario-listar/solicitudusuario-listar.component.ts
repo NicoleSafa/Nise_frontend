@@ -18,7 +18,7 @@ export class SolicitudusuarioListarComponent implements OnInit{
 
     ngOnInit(): void {
       const user = JSON.parse(localStorage.getItem('dato')!);
-      this.username = user.username;
+      this.username = user.username; 
       this.getSolicitudusuarios();
     }
 

@@ -8,6 +8,7 @@ import { SolicitudusuarioRoutingModule } from './solicitudusuario-routing.module
 import { SolicitudusuarioCrearComponent } from './solicitudusuario-crear/solicitudusuario-crear.component';
 import { SolicitudusuarioListarComponent } from './solicitudusuario-listar/solicitudusuario-listar.component';
 import { SolicitudusuarioDetailEditarComponent } from './solicitudusuario-detail-editar/solicitudusuario-detail-editar.component';
+import { SolicitudusuarioPerfilListarComponent } from './solicitudusuario-perfil-listar/solicitudusuario-perfil-listar.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { SolicitudusuarioDetailEditarComponent } from './solicitudusuario-detail
     SolicitudusuarioComponent,
     SolicitudusuarioCrearComponent,
     SolicitudusuarioListarComponent,
-    SolicitudusuarioDetailEditarComponent
+    SolicitudusuarioDetailEditarComponent,
+    SolicitudusuarioPerfilListarComponent
   ],
   imports: [
     SolicitudusuarioRoutingModule,

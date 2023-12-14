@@ -1,1 +1,54 @@
-<p>solicitudusuario-detail-editar works!</p>
+<div class="prueba">
+    <section>
+        <main class="table">
+
+            <div class="table__header">
+                <img src="../../assets/imagenes/logonise.png" class="logo">
+                <h1>Detalles de la solicitud para adopción de {{solicitudusuario.animalDTO.nombre}}</h1>
+            </div>
+
+            <div class="table__body">
+
+                <div>
+                    <label><strong> Título: </strong> {{solicitudusuario.tituloMotivo}} </label>
+                </div>
+                
+                <div>
+                    <label><strong> Motivo: </strong> {{solicitudusuario.motivo}} </label>
+                </div>
+
+                <div>
+                    <label><strong> Solicitada por: </strong> {{solicitudusuario.adoptanteDTO.nombre}} </label>
+                </div>
+
+                <div class="card-body">
+                    <form (ngSubmit)="onSubmit()">
+
+                        <div>
+                            <label><strong> ¿Qué deseas hacer con la solicitud? </strong></label>
+                        </div>
+        
+                       
+                        <div class="form-group">
+                            <label> Editar estado</label>
+                            <select id="estadoSolicitud" [(ngModel)]="solicitudusuario.estadoSolicitud" name="estadoSolicitud" class="styled-select">
+                            <option value="ACEPTADO">Aceptar</option>
+                            <option value="RECHAZADO">Rechazar</option>
+                            </select>
+                        </div>
+    
+                        <br/>
+                        <button class="button" type="submit">Enviar</button>
+                       
+                    </form>
+                </div>
+
+            </div>
+
+        </main>
+    </section>
+
+
+
+</div>
+

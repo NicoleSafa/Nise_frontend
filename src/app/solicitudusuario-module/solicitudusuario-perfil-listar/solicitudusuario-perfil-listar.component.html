@@ -4,7 +4,7 @@
 
             <div class="table__header">
                 <img src="../../assets/imagenes/logonise.png" class="logo">
-                <h1>Solicitudes de adopción de {{username}}</h1>
+                <h1>Solicitudes de adopción de </h1>
             </div>
 
             <div class="table__body">
@@ -21,7 +21,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor= "let solicitud of solicitudusuarios">
+                        <tr *ngFor= "let solicitud of solicitudusuarios1">
                             <td> <strong> {{solicitud.id}} </strong> </td>
                             <td>{{solicitud.tituloMotivo}}</td>
                             <td> {{solicitud.estadoSolicitud}} </td>
