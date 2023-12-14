@@ -31,6 +31,7 @@ export class PerfilComponent implements OnInit{
 
    if(this.rol === 'USUARIO' || this.rol === 'ADMIN'){
      this.perfil();
+
    }else{
     this.protectoraPerfil();
    }
