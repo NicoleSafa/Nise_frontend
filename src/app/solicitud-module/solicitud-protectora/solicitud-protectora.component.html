@@ -3,7 +3,9 @@
         <main class="table">
 
             <div class="table__header">
-                <img src="../../assets/imagenes/logonise.png" class="logo">
+                <a routerLink="/Inicio">
+                    <img src="../../assets/imagenes/logonise.png" class="logo">
+                </a>
                 <h1>Solicitudes de adopción de {{username}}</h1>
             </div>
 
@@ -20,7 +22,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor= "let solicitud of solicitudes">
+                        <tr *ngFor= "let solicitud of solicitudDatos">
                             <td> <strong> {{solicitud.id}} </strong> </td>
                             <td> {{solicitud.tituloMotivo}} </td>
                             <td> {{solicitud.animalDTO.nombre}} </td>

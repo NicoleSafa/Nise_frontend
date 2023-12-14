@@ -41,7 +41,7 @@
                     <div class=" eeeeeee" *ngFor= "let animal of animales">
                         <a [routerLink]="['/animal/mostrarPerros', animal.id]">
                             <div class="card">
-                                <img src="../../../assets/imagenes/adopcion/gato.jpg" class="img_mascota">
+                                <img width="100px" [src]="animal.imagenUrl" class="img_mascota">
                                 <div class="datosAnimal">
                                     <h3>{{animal.nombre }}</h3>
                                     <p>{{animal.descripcion }}</p>

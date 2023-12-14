@@ -6,6 +6,7 @@ import { Usuariodatos } from './usuariodatos';
 import { Protectora } from './protectora';
 import { Animal } from './animal';
 import {Vacuna} from "../vacunas-module/vacuna";
+import { UsuarioDatos } from '../models/usuarioDatos';
 
 
 @Injectable({
@@ -29,6 +30,9 @@ export class UsuarioService {
     return this.httpClient.get<Usuario[]>(`${this.usuarioURL}`);
   }
 
+  getUsuarioListDatos(): Observable<UsuarioDatos[]>{
+    return this.httpClient.get<UsuarioDatos[]>(`${this.usuarioURL}`);
+  }
 
   //LISTAR ONE BY ONE -- DETAIL
   getUsuarioById(id: number): Observable<Usuario>{

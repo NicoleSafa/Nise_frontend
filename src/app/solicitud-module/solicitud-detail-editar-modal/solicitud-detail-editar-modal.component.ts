@@ -3,6 +3,7 @@ import { Solicitud } from '../solicitud';
 import { SolicitudService } from '../solicitud.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { data, error } from 'jquery';
+import { SolicitudDatos } from 'src/app/models/solicitudDatos';
 
 @Component({
   selector: 'app-solicitud-detail-editar-modal',
@@ -13,6 +14,8 @@ export class SolicitudDetailEditarModalComponent implements OnInit{
 
   id: number;
   solicitud: Solicitud = new Solicitud();
+  solicitudDatos: SolicitudDatos;
+
   constructor(private solicitudService: SolicitudService,
     private route: ActivatedRoute,
     private router: Router){}
@@ -21,13 +24,16 @@ export class SolicitudDetailEditarModalComponent implements OnInit{
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
 
-    this.solicitudService.getSolicitudById(this.id).subscribe(data => {  
-      console.log('Respuesta del servidor:', data); 
+    this.solicitudService.getSolicitudByIdDatos(this.id).subscribe(solicitudDatos => {
+      this.solicitudDatos = solicitudDatos;
+    });
+
+    this.solicitudService.getSolicitudById(this.id).subscribe(data => {
+      console.log('Respuesta del servidor:', data);
       this.solicitud = data;
       console.log('Animal DTO:', this.solicitud.animalDTO);
       console.log('Usuario DTO:', this.solicitud.usuarioDTO); // Verifica los datos de usuarioDTO
       console.log('Protectora DTO:', this.solicitud.protectoraDTO);
-
 
     }, error => console.log(error));
   }
@@ -40,7 +46,8 @@ export class SolicitudDetailEditarModalComponent implements OnInit{
   }
 
   goToSolicitudList(){
-    this.router.navigate(['']);
+    this.router.navigate(['/solicituds/solicitudProtectora']);
   }
+
 
 }

@@ -45,6 +45,17 @@ export class AnimalProtectoraComponent {
     })
   }
 
+  deleteAnimal(id: number){
+    this.animalService.deleteAnimal(id).subscribe(data => {
+      console.log(data);
+      this.getAnimal();
+      this.gotoAnimalList();
+    })
+  }
+
+  gotoAnimalList(): void {
+    this.router.navigate(['/animal/animalProtectoras']);
+  }
 
 
 }

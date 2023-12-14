@@ -1,29 +1,38 @@
-<h3>Registrar mascotas</h3>
-<div class="row">
-    <div class="card col-md-6 offset-md-3 offset-md-3">
-        <div class="row">
-            <h3 class="text-center"> Create mascota </h3>
-            <hr />
-            <div class="card-body">
+<div class="prueba">
+    <section>
+        <main class="table">
+
+            <div class="table__header">
+                <a routerLink="/usuarios/perfil">
+                    <img src="../../assets/imagenes/logonise.png" class="logo">
+                </a>
+                <h1>Añadir una mascota</h1>
+            </div>
+
+            <div class="table__body">
                 <form (ngSubmit)="onSubmit()" enctype="multipart/form-data">
 
+
                     <div class="form-group">
-                        <label> nombre</label>
+                        <label>Nombre</label>
                         <input type="text" class="form-control" id="nombre" [(ngModel)]="animal.nombre"
                             name="nombre">
                     </div>
 
+
                     <div class="form-group">
-                        <label> descripcion</label>
+                        <label>Descripción</label>
                         <input type="text" class="form-control" id="descripcion" [(ngModel)]="animal.descripcion"
                             name="descripcion">
                     </div>
 
+
                     <div class="form-group">
-                        <label> raza</label>
+                        <label>Raza</label>
                         <input type="text" class="form-control" id="raza" [(ngModel)]="animal.raza"
                             name="raza">
                     </div>
+
 
                     <div class="form-group">
                         <label> Edad</label>
@@ -31,11 +40,13 @@
                             name="edad">
                     </div>
 
+
                     <div class="form-group">
                         <label> ¿Está disponible?</label>
-                        <input type="checkbox" id="disponibilidad" [(ngModel)]="animal.disponibilidad"
+                        <input type="checkbox" id="disponibilidad" disabled [(ngModel)]="animal.disponibilidad"
                             name="disponibilidad" style="margin-left: 10px;">
                     </div>
+
 
                     <div class="form-group">
                         <label> ¿Tiene chip?</label>
@@ -43,31 +54,35 @@
                             name="chip" style="margin-left: 10px;">
                     </div>
 
+
                     <div class="form-group">
-                        <label> tipoAnimal</label>
-                        <select id="tipoAnimal" [(ngModel)]="animal.tipoAnimal" name="tipoAnimal" >
+                        <label> Especie</label>
+                        <select id="tipoAnimal" [(ngModel)]="animal.tipoAnimal" name="tipoAnimal" class="styled-select">
                             <option value="PERRO">Perro</option>
                             <option value="GATO">Gato</option>
                             <option value="OTRO">Otro</option>
                         </select>
                     </div>
 
+
                     <div class="form-group">
-                        <label> tipoSexo</label>
-                        <select id="tipoSexo" [(ngModel)]="animal.tipoSexo" name="tipoSexo">
+                        <label> Género</label>
+                        <select id="tipoSexo" [(ngModel)]="animal.tipoSexo" name="tipoSexo" class="styled-select">
                             <option value="HEMBRA">Hembra</option>
                             <option value="MACHO">Macho</option>
                         </select>
                     </div>
 
+
                     <div class="form-group">
-                        <label> tipoTamanyo</label>
-                        <select id="tipoTamanyo" [(ngModel)]="animal.tipoTamanyo" name="tipoTamanyo">
+                        <label> Tamaño</label>
+                        <select id="tipoTamanyo" [(ngModel)]="animal.tipoTamanyo" name="tipoTamanyo" class="styled-select">
                             <option value="GRANDE">Grande</option>
                             <option value="MEDIANO">Mediano</option>
                             <option value="PEQUEÑO">Pequeño</option>
                         </select>
                     </div>
+
 
                     <div class="form-group">
                         <label> Fecha entrada protectora (DD/MM/YYYY)</label>
@@ -75,16 +90,23 @@
                             name="fechaEntradaProtectora">
                     </div>
 
+
                     <div class="form-group">
                         <label> Imagen de la Mascota:</label>
                         <input type="file" class="form-control" name="imagen" id="imagen" (change)="onImageSeleccionada($event)" accept="image/*" required>
                     </div>
 
+
                     <br />
-                    <button class="btn btn-success" type="submit">Submit</button>
+                    <button class="button" type="submit">Dar en adopcion</button>
+
 
                 </form>
             </div>
-        </div>
-    </div>
+
+        </main>
+    </section>
+
+
+
 </div>

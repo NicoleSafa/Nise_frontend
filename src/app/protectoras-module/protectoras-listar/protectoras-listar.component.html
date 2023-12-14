@@ -2,7 +2,9 @@
     <main class="table">
 
         <div class="table__header">
-            <img src="../../assets/imagenes/logonise.png" class="logo">
+            <a routerLink="/Inicio">
+                <img src="../../assets/imagenes/logonise.png" class="logo">
+            </a>
             <h1>Protectoras asociadas</h1>
             <div class="input-group">
                 <input type="search" placeholder="Buscar protectora...">
@@ -33,9 +35,9 @@
                         <td> {{protectora.telefono}} </td>
                         <td> <p>{{protectora.email}}</p> </td>
                         <td class="opciones">
-                            <div class="buttonEdit">
+                            <!-- <div class="buttonEdit">
                                 <i class='bx bxs-edit'[routerLink]="['update-protectora', protectora.id]" ></i>
-                            </div>
+                            </div> -->
                             <div class="buttonDelete">
                                 <i (click)="deleteProtectora(protectora.id)" class='bx bxs-trash'></i>
                             </div>

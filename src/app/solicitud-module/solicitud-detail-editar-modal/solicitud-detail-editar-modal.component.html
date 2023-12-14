@@ -3,8 +3,10 @@
         <main class="table">
 
             <div class="table__header">
-                <img src="../../assets/imagenes/logonise.png" class="logo">
-                <h1>Detalles de la solicitud para adopción de {{solicitud.animalDTO}}</h1>
+                <a routerLink="/Inicio">
+                    <img src="../../assets/imagenes/logonise.png" class="logo">
+                </a>
+                <h1>Detalles de la solicitud para adopción de {{solicitudDatos.animalDTO.nombre}}</h1>
             </div>
 
             <div class="table__body">
@@ -17,7 +19,7 @@
                 </div>
 
                 <div>
-                    <label><strong> Solicitada por: </strong> {{solicitud.usuarioDTO}} </label>
+                    <label><strong> Solicitada por: </strong> {{solicitudDatos.usuarioDTO.nombre}} </label>
                 </div>
 
                 <div class="card-body">
@@ -26,8 +28,8 @@
                         <div>
                             <label><strong> ¿Qué deseas hacer con la solicitud? </strong></label>
                         </div>
-        
-                       
+
+
                         <div class="form-group">
                             <label> Editar estado</label>
                             <select id="estadoSolicitud" [(ngModel)]="solicitud.estadoSolicitud" name="estadoSolicitud" class="styled-select">
@@ -35,10 +37,10 @@
                             <option value="RECHAZADO">Rechazar</option>
                             </select>
                         </div>
-    
+
                         <br/>
                         <button class="button" type="submit">Enviar</button>
-                       
+
                     </form>
                 </div>
 

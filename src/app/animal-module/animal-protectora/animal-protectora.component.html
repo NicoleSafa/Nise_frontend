@@ -3,7 +3,9 @@
         <main class="table">
 
             <div class="table__header">
-                <img src="../../assets/imagenes/logonise.png" class="logo">
+                <a routerLink="/Inicio">
+                    <img src="../../assets/imagenes/logonise.png" class="logo">
+                </a>
                 <h1>Mascotas de {{username}}</h1>
                 <div class="input-group">
                     <input type="search" placeholder="Buscar animal...">
@@ -56,7 +58,7 @@
                                     <i class='bx bxs-edit'[routerLink]="['update-animal', animal.id]" ></i>
                                 </div>
                                 <div class="buttonDelete">
-                                    <i (click)="(animal.id)" class='bx bxs-trash'></i> <!-- NO FUNCIONA -->
+                                    <i (click)="deleteAnimal(animal.id)" class='bx bxs-trash'></i> <!-- NO FUNCIONA -->
                                 </div>
                                 <div class="buttonDetail">
                                     <i class='bx bxs-detail' [routerLink]="['animal-details', animal.id]" ></i>

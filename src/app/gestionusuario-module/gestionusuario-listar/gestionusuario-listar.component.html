@@ -3,8 +3,10 @@
         <main class="table">
 
             <div class="table__header">
-                <img src="../../assets/imagenes/logonise.png" class="logo">
-                <h1>Gestión usuario</h1>
+                <a routerLink="/Inicio">
+                    <img src="../../assets/imagenes/logonise.png" class="logo">
+                </a>
+                <h1>Historial de adopciones entre usuarios</h1>
             </div>
 
             <div class="table__body">
@@ -16,7 +18,7 @@
                             <th>Donante</th>
                             <th>Receptor</th>
                             <th>Animal</th>
-                            
+
                         </tr>
                     </thead>
                     <tbody>
@@ -26,8 +28,8 @@
                             <td> {{gestion.donanteDTO.nombre}} </td>
                             <td> {{gestion.receptorDTO.nombre}} </td>
                             <td> {{gestion.animalDTO.nombre}} </td>
-                            
-                            
+
+
                         </tr>
                     </tbody>
                 </table>

@@ -1,60 +1,73 @@
-<div class="row">
-  <div class="card col-md-6 offset-md-3 offset-md-3">
-    <div class="row">
-      <h3 class="text-center"> Update Usuario  <button routerLink="/usuarios/perfil" class="btn btn-primary col-3" >Perfil</button> </h3>
-      <hr />
-      <div class="card-body mt-5">
-        <form class="row g-3" (ngSubmit)="onSubmit()">
-          <div class="col-md-6">
-            <label for="nombre" class="form-label"> Nombre</label>
-            <input type="text" class="form-control" id="nombre" [(ngModel)]="usuario.nombre" name="nombre">
-          </div>
-          <div class="col-md-6">
-            <label for="telefono" class="form-label"> Telefono</label>
-            <input type="text" class="form-control" id="telefono" [(ngModel)]="usuario.telefono" name="telefono" maxlength="9">
-          </div>
-          <div class="col-md-6">
-            <label for="direccion" class="form-label"> Dirección</label>
-            <input type="text" class="form-control" id="direccion" [(ngModel)]="usuario.direccion" name="direccion">
-          </div>
-          <div class="col-md-6">
-            <label for="email" class="form-label"> Correo Electronico</label>
-            <input type="text" class="form-control" id="email" [(ngModel)]="usuario.email" name="email">
-          </div>
-          <div class="col-12">
-            <label for="dni" class="form-label">Address</label>
-            <input type="text" class="form-control" id="dni" [(ngModel)]="usuario.dni" name="dni">
+<div class="prueba">
+  <section>
+      <main class="table">
+
+          <div class="table__header">
+            <a routerLink="/Inicio">
+              <img src="../../assets/imagenes/logonise.png" class="logo">
+          </a>
+              <h1>Editar usuario</h1>
           </div>
 
-          <div class="col-md-4">
-            <label for="tipo" class="form-label">Animal Favorito</label>
-            <select id="tipo" name="tipo" class="form-control" [(ngModel)]="usuario.preferenciaTipoAnimal">
-              <option value="0">Perros</option>
-              <option value="1">Gatos</option>
-              <option value="2">Otros</option>
-            </select>
-          </div>
-          <div class="col-md-4">
-            <label for="tipoSexo" class="form-label">Sexo del Animal</label>
-            <select id="tipoSexo" name="tipoSexo" class="form-control" [(ngModel)]="usuario.preferenciaSexo">
-              <option value="0">Hembra</option>
-              <option value="1">Macho</option>
-            </select>
-          </div>
-          <div class="col-md-4">
-            <label for="tamanyo" class="form-label">Tamaño del Animal</label>
-            <select id="tamanyo" name="tamanyo" class="form-control" [(ngModel)]="usuario.preferenciaTipoTamanyo">
-              <option value="0">Pequeño</option>
-              <option value="1">Mediano</option>
-              <option value="2">Grande</option>
-            </select>
+          <div class="table__body">
+            <form class="row g-3" (ngSubmit)="onSubmit()">
+              <div class="col-md-6" id="form">
+                <label for="nombre" class="form-label"> Nombre</label>
+                <input type="text" class="form-control" id="nombre" [(ngModel)]="usuario.nombre" name="nombre">
+              </div>
+              <div class="col-md-6" id="form">
+                <label for="telefono" class="form-label"> Telefono</label>
+                <input type="text" class="form-control" id="telefono" [(ngModel)]="usuario.telefono" name="telefono" maxlength="9">
+              </div>
+              <div class="col-md-6" id="form">
+                <label for="direccion" class="form-label"> Dirección</label>
+                <input type="text" class="form-control" id="direccion" [(ngModel)]="usuario.direccion" name="direccion">
+              </div>
+              <div class="col-md-6" id="form">
+                <label for="email" class="form-label"> Correo Electronico</label>
+                <input type="text" class="form-control" id="email" [(ngModel)]="usuario.email" name="email">
+              </div>
+              <div class="col-12" id="form">
+                <label for="dni" class="form-label">Address</label>
+                <input type="text" class="form-control" id="dni" [(ngModel)]="usuario.dni" name="dni">
+              </div>
+
+
+              <div class="col-md-4" id="form">
+                <label for="tipo" class="form-label">Animal Favorito</label>
+                <select id="tipo" name="tipo" class="form-control" [(ngModel)]="usuario.preferenciaTipoAnimal">
+                  <option value="0">Perros</option>
+                  <option value="1">Gatos</option>
+                  <option value="2">Otros</option>
+                </select>
+              </div>
+              <div class="col-md-4" id="form">
+                <label for="tipoSexo" class="form-label">Sexo del Animal</label>
+                <select id="tipoSexo" name="tipoSexo" class="form-control" [(ngModel)]="usuario.preferenciaSexo">
+                  <option value="0">Hembra</option>
+                  <option value="1">Macho</option>
+                </select>
+              </div>
+              <div class="col-md-4" id="form">
+                <label for="tamanyo" class="form-label">Tamaño del Animal</label>
+                <select id="tamanyo" name="tamanyo" class="form-control" [(ngModel)]="usuario.preferenciaTipoTamanyo">
+                  <option value="0">Pequeño</option>
+                  <option value="1">Mediano</option>
+                  <option value="2">Grande</option>
+                </select>
+              </div>
+
+
+              <div class="col-12" id="form">
+                <button class="button" type="submit">Editar</button>
+              </div>
+            </form>
+
           </div>
 
-          <div class="col-12">
-            <button class="btn btn-success" type="submit">Submit</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
+      </main>
+  </section>
+
+
+
 </div>

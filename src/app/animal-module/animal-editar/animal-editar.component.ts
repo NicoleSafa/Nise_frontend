@@ -45,7 +45,7 @@ export class AnimalEditarComponent implements OnInit {
     }
 
     gotoAnimalList(): void {
-      this.router.navigate(['/']);
+      this.router.navigate(['/animal/animalProtectoras']);
     }
 
 }
