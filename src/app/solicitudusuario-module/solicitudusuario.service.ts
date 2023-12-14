@@ -40,7 +40,7 @@ export class SolicitudusuarioService {
     const opciones = {
       params : parametros
     }
-    return this.http.get<Solicitudusuario[]>(`${this.linkUsuario}`, opciones)
+    return this.http.get<Solicitudusuario[]>(`http://localhost:8080/solicitudesUsuario/listarSolicitudUsuario`, opciones)
    }
 
    getSolicitudUsuarioById(id: number): Observable<Solicitudusuario>{
