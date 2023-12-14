@@ -5,6 +5,7 @@ import { UsuariosListarComponent } from './usuarios-listar/usuarios-listar.compo
 import { UsuariosDetailComponent } from './usuarios-detail/usuarios-detail.component';
 import {UsuariosUpdateComponent} from "./usuarios-update/usuarios-update.component";
 import { PerfilComponent } from './perfil/perfil.component';
+import { AnimalUsuarioComponent } from './animal-usuario/animal-usuario.component';
 
 
 
@@ -15,6 +16,7 @@ const routes: Routes = [
       {path: 'usuariosListar/usuario-details/:id', component: UsuariosDetailComponent},
       {path: 'perfil/update-usuario/:id', component: UsuariosUpdateComponent},
       {path: 'perfil', component: PerfilComponent},
+      {path: 'perfil/animalCrear', component: AnimalUsuarioComponent}
     ]
   }
 ];

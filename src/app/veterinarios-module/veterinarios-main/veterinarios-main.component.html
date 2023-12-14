@@ -121,30 +121,31 @@
 
   </header>
   <section class="home" id="home">
-
-      <div class="content">
-          <h3>Veterinarios en tu zona</h3>
-          <p>
-            Aqui mostramos una serie de veterinarios dedicados a brindar atencion tanto a nuestras mascostas como a las tuyas.
-            Estos profesionales se preocupan por la salud y la felicidad de tus compañeros peludos, desde chequeos de rutina hasta servicios
-            mas especializados, nuestros veterinarios estan aqui para cuidar mascotas.
-            Descubre sus servicios y confia en su experiencia para mantenerlos en las mejores condiciones.
-          </p>
-          <p class="text-center mb-5">Conoce a los veterinarios locales listos para ayudarte. </p>
-      </div>
-      <div class="container text-center margenes">
+    <div class="content">
+      <h3>Veterinarios en tu zona</h3>
+      <p>
+        Aquí mostramos una serie de veterinarios dedicados a brindar atención tanto a nuestras mascotas como a las tuyas.
+        Estos profesionales se preocupan por la salud y la felicidad de tus compañeros peludos, desde chequeos de rutina hasta servicios más especializados, nuestros veterinarios están aquí para cuidar mascotas.
+        Descubre sus servicios y confía en su experiencia para mantenerlos en las mejores condiciones.
+      </p>
+      <p class="text-center mb-5">Conoce a los veterinarios locales listos para ayudarte.</p>
+    </div>
+    <div class="dosvetes">
+      <div class="contenedor">
         <div class="row">
-        <article class="card col-lg-3 col-md-4 col-xs-6 mb-5 me-5" *ngFor= "let vete of veterinarios">
-            <div class="card-int" >
-                <div class="img">
-                </div>
-                <div class="card-data">
-                    <p class="title">{{vete.nombre}}</p>
-                    <p class="mb-2">{{vete.direccion}} <br> {{vete.telefono}} <br> {{vete.email}}</p>
-                    <a class="action_btn"  [href]="vete.mapa">more info</a>
-                </div>
+          <div class="col-md-6" *ngFor="let vete of veterinarios">
+            <div class="card" style="--clr: #009688">
+              <div class="img-box">
+                <img [src]="vete.imagenUrl">
+              </div>
+              <div class="content">
+                <h2>{{ vete.nombre }}</h2>
+                <p>{{ vete.direccion }}<br/> {{ vete.telefono }}<br/> {{ vete.email }}</p>
+                <a [href]="vete.mapa">Ver mapa</a>
+              </div>
             </div>
-        </article>
+          </div>
         </div>
       </div>
+    </div>
   </section>
