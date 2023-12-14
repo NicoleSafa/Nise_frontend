@@ -28,6 +28,14 @@ export class SolicitudusuarioCrearComponent implements OnInit{
   ){}
 
   ngOnInit() {
+    this.solicitudUsuarioForm = this.formBuilder.group({
+      estadoSolicitud: 'PENDIENTE',
+      motivo: '',
+      tituloMotivo: '',
+      animalDTO: [],
+      adoptanteDTO: [],
+      ofertanteDTO: []
+    });   
     let user = JSON.parse(localStorage.getItem('dato')!);
     this.username = user.username;
 
@@ -52,14 +60,7 @@ export class SolicitudusuarioCrearComponent implements OnInit{
     }
   });
 
-    this.solicitudUsuarioForm = this.formBuilder.group({
-      estadoSolicitud: 'PENDIENTE',
-      motivo: '',
-      tituloMotivo: '',
-      animalDTO: [],
-      adoptanteDTO: [],
-      ofertanteDTO: []
-    });
+    
   }
 
     onSubmit(){

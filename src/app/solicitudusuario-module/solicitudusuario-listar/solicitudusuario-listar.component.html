@@ -1,28 +1,46 @@
-<p>gestionusuario-listar works!</p>
-<table class="table table-striped">
+<div class="prueba">
+    <section>
+        <main class="table">
 
-    <thead>
-        <tr></tr>
-            <th>Estado solicitud</th>
-            <th>Motivo</th>
-            <th>Animal</th>
-            <th>Adoptante</th>
+            <div class="table__header">
+                <img src="../../assets/imagenes/logonise.png" class="logo">
+                <h1>Solicitudes de adopción de {{username}}</h1>
+            </div>
 
-           
-    </thead>
-    <tbody>
-        <tr *ngFor= "let solicitudusuario of solicitudusuarios">
-            <td> {{solicitudusuario.estadoSolicitud }} </td>
-            <td> {{solicitudusuario.motivo }} </td>
-            <td> {{solicitudusuario.animalDTO.nombre }} </td>
-            <td> {{solicitudusuario.adoptanteDTO.nombre }} </td>
-            
+            <div class="table__body">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Número</th>
+                            <th>Estado solicitud</th>
+                            <th>Motivo</th>
+                            <th>Animal</th>
+                            <th>Solicitado por</th>
+                            <th>Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor= "let solicitud of solicitudusuarios">
+                            <td> <strong> {{solicitud.id}} </strong> </td>
+                            <td> {{solicitud.estadoSolicitud}} </td>
+                            <td> {{solicitud.motivo}} </td>
+                            <td> {{solicitud.animalDTO.nombre}} </td>
+                            <td> {{solicitud.adoptanteDTO.nombre}} </td>
+                            <td class="opciones">
+                                <div class="buttonDetail">
+                                    <i class='bx bxs-detail' [routerLink]="['solicitud-details', solicitud.id]" ></i>
+                                </div>
 
-        </tr>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+    </section>
 
 
-    </tbody>
 
-
-</table>
+</div>
 

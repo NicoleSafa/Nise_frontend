@@ -7,13 +7,15 @@ import { SolicitudusuarioComponent } from './solicitudusuario.component'; //para
 import { SolicitudusuarioRoutingModule } from './solicitudusuario-routing.module';
 import { SolicitudusuarioCrearComponent } from './solicitudusuario-crear/solicitudusuario-crear.component';
 import { SolicitudusuarioListarComponent } from './solicitudusuario-listar/solicitudusuario-listar.component';
+import { SolicitudusuarioDetailEditarComponent } from './solicitudusuario-detail-editar/solicitudusuario-detail-editar.component';
 
 
 @NgModule({
   declarations: [
     SolicitudusuarioComponent,
     SolicitudusuarioCrearComponent,
-    SolicitudusuarioListarComponent
+    SolicitudusuarioListarComponent,
+    SolicitudusuarioDetailEditarComponent
   ],
   imports: [
     SolicitudusuarioRoutingModule,

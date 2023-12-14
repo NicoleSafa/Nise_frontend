@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SolicitudusuarioService } from '../solicitudusuario.service';
 import { Router } from '@angular/router';
+import { data } from 'jquery';
 import { Solicitudusuario } from '../solicitudusuario';
 
 @Component({
@@ -11,16 +12,18 @@ import { Solicitudusuario } from '../solicitudusuario';
 export class SolicitudusuarioListarComponent implements OnInit{
 
   solicitudusuarios: Solicitudusuario[];
+  username: string;
 
-  constructor(private solicitudusuarioService: SolicitudusuarioService,
-    private router: Router){}
+  constructor(private solicitudusuarioService: SolicitudusuarioService){}
 
     ngOnInit(): void {
-      this.getGestionusuarios();
+      const user = JSON.parse(localStorage.getItem('dato')!);
+      this.username = user.username;
+      this.getSolicitudusuarios();
     }
 
-    private getGestionusuarios(){
-      this.solicitudusuarioService.getsolicitudUsuarioList().subscribe(data => {
+    private getSolicitudusuarios(){
+      this.solicitudusuarioService.getSolicitudByUsuario().subscribe(data => {
         this.solicitudusuarios = data;
       });
     }

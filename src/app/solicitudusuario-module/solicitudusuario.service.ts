@@ -40,4 +40,16 @@ export class SolicitudusuarioService {
    getsolicitudUsuarioList(): Observable<Solicitudusuario[]>{
     return this.http.get<Solicitudusuario[]>(`${this.listarSolicitudUsuario}`);
   }
+  getUserData(): number {
+    const userDataID = JSON.parse(localStorage.getItem('id')!);
+    console.log(userDataID);
+    return userDataID;
+  }
+
+  //editar
+  updateSolicitudUsuario(id: number, solicitudusuario: Solicitudusuario): Observable<Object>{
+    return this.http.put(`${this.listarSolicitudUsuario}/${id}`, solicitudusuario);
+  }
+
+
 }

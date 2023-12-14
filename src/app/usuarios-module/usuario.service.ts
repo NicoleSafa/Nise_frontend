@@ -23,6 +23,7 @@ export class UsuarioService {
   private usuarioDetailUrl= "http://localhost:8080/usuario/details";
   private usuarioDonados= "http://localhost:8080/animal/perfil/donados";
   private usuarioAdoptados= "http://localhost:8080/animal/perfil/adoptados";
+
   //LISTAR
   getUsuarioList(): Observable<Usuario[]>{
     return this.httpClient.get<Usuario[]>(`${this.usuarioURL}`);
@@ -116,5 +117,14 @@ export class UsuarioService {
   getUsuarioByAnimalId(animalId: number): Observable<any>{
     return this.httpClient.get(`http://localhost:8080/animal/${animalId}/usuario`);
   }
+
+
+  getUsuarioByOne(username: string): Observable<Usuario>{
+    return this.httpClient.get<Usuario>(`${this.usernamesURL}/user/${username}`);
+  }
+
+  //getUsuariobyUsername(username: string): Observable<Usuario>{
+    //return this.httpClient.get<Usuario>(`${this.usernamesURL}/${username}`);
+  //}
 
 }
