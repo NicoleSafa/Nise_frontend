@@ -40,6 +40,6 @@ export class SolicitudusuarioDetailEditarComponent implements OnInit{
   
     goToSolicitudusuarioList(){
       this.router.navigate(['']);
-    }
+    }// dejame subir
 
 }
